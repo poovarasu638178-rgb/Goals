@@ -49,7 +49,7 @@ const SCENARIOS = [
   "Player refused to leave after being subbed",
 ];
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://goals-z8j9.onrender.com';
 
 export default function Analyzer() {
   const [language, setLanguage] = useState('English');
