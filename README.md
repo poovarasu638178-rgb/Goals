@@ -1,157 +1,101 @@
-# Goals ⚽
+<div align="center">
+  <h1>⚽ GOALS</h1>
+  <h3>Every Match Moment, Understood by Everyone</h3>
+  <p>AI-powered FIFA World Cup companion that explains any match moment to 2.5 billion fans in 20+ languages at any knowledge level.</p>
 
-> **Every match moment, understood by everyone**
-
-An IBM Granite-powered AI companion for the 2026 FIFA World Cup — explaining any match moment to 2.5 billion fans in 20+ languages at any knowledge level.
-
-Built for the **IBM SkillsBuild AI Builders Challenge 2026**.
+  <p>
+    <a href="https://goals01.vercel.app"><strong>Live Demo (Frontend on Vercel, Backend on Render)</strong></a>
+  </p>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel" alt="Vercel" />
+    <img src="https://img.shields.io/badge/Backend-Render-46E3B7?logo=render" alt="Render" />
+    <img src="https://img.shields.io/badge/AI-IBM_Granite-0F62FE?logo=ibm" alt="IBM Granite" />
+  </p>
+</div>
 
 ---
 
-## 🏗 Tech Stack
+**Built for the IBM SkillsBuild AI Builders Challenge 2026**
 
-| Layer | Technology |
-|---|---|
-| Frontend | React 18 + Vite + Tailwind CSS 3 |
-| Backend | FastAPI (Python 3.11+) |
-| AI Core | IBM Granite 3.3 via watsonx.ai |
-| Deploy | Vercel (frontend) + Render (backend) |
+**Team Apex01**
+- **Poovarasu S** — Team Lead, Full Stack Developer
+- **Ajai Kumar R** — Team Member
+
+---
+
+## 🌍 What is GOALS?
+
+GOALS is a human-centered AI companion powered by **IBM Granite**. It explains any FIFA World Cup moment — VAR decisions, tactical shifts, player performance, cultural context — in your own language, at your own knowledge level.
+
+2.5 billion fans watched the 2022 World Cup. Most didn't understand what they were watching. **GOALS changes that.**
+
+---
+
+## 🔍 4 Analysis Modes
+
+- 📺 **VAR Explainer** — step by step breakdown with FIFA Law reference
+- ♟️ **Tactical Decoder** — formation changes and substitution logic
+- 🏃 **Human Performance** — fatigue, pressure, emotion explained
+- 🤝 **Cultural Bridge** — local context in your language
+
+---
+
+## 🛠 Tech Stack
+
+| Layer | Technology | Deployment |
+|-------|-----------|------------|
+| **Frontend** | React 18 + Vite + Tailwind CSS | [Vercel](https://goals01.vercel.app) |
+| **Backend** | FastAPI (Python 3.11) | Render |
+| **AI Core** | IBM Granite 4.1 8B via OpenRouter | N/A |
+
+---
+
+## 🗣 Supported Languages
+
+We proudly support 20+ languages out of the box, powered seamlessly by IBM Granite:
+`English`, `Hindi`, `Tamil`, `Telugu`, `Bengali`, `Spanish`, `French`, `Arabic`, `Portuguese`, `Japanese`, `Korean`, `Chinese`, `Swahili`, `German`, `Italian`, `Dutch`, `Russian`, `Turkish`, `Indonesian`, `Urdu`.
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Node.js 18+
-- Python 3.11+
-- IBM watsonx.ai account (for real AI — works in demo mode without it)
-
----
-
-### Frontend Setup
-
+### Frontend (React/Vite)
 ```bash
 cd frontend
 npm install
 npm run dev
-# → http://localhost:5173
 ```
 
-### Backend Setup
-
+### Backend (FastAPI)
 ```bash
 cd backend
-
-# Create and activate virtual environment
 python -m venv venv
-source venv/bin/activate      # macOS/Linux
-# or: venv\Scripts\activate   # Windows
-
-# Install dependencies
+source venv/bin/activate
 pip install -r requirements.txt
-
-# Configure credentials
 cp .env.example .env
-# Edit .env with your IBM watsonx credentials
-
-# Start the server
+# Add your OPENROUTER_API_KEY to .env
 uvicorn main:app --reload --port 8000
-# → http://localhost:8000
 ```
 
 ---
 
-## 🔑 IBM watsonx Configuration
+## 🧠 IBM Technology
 
-1. Sign up at [ibm.com/watsonx](https://www.ibm.com/watsonx)
-2. Create a project and note your **Project ID**
-3. Generate an **API Key** from IBM Cloud IAM
-4. Add credentials to `backend/.env`:
-
-```env
-WATSONX_API_KEY=your_key_here
-WATSONX_PROJECT_ID=your_project_id_here
-WATSONX_URL=https://us-south.ml.cloud.ibm.com
-```
-
-> **Note:** The app works in **demo mode** without credentials — showing mock responses to demonstrate the full UI/UX flow.
+**IBM Granite 4.1 8B** is the core AI engine — not a wrapper. It drives all 4 analysis modes with multilingual output, structured JSON responses, confidence scoring, and culturally-aware explanations.
 
 ---
 
-## 🌍 Supported Languages
+## 🏆 IBM SkillsBuild AI Builders Challenge 2026
 
-English • Hindi • Tamil • Telugu • Bengali • Urdu • Spanish • French • German • Portuguese • Arabic • Japanese • Korean • Chinese Simplified • Swahili • Italian • Dutch • Russian • Turkish • Indonesian
-
----
-
-## 📡 API Reference
-
-### `POST /api/analyze`
-
-```json
-{
-  "situation": "Mbappe goal disallowed for offside",
-  "language": "Hindi",
-  "knowledge_level": "new_fan",
-  "analysis_type": "var"
-}
-```
-
-**Response:**
-```json
-{
-  "verdict": "Goal disallowed — VAR confirms offside",
-  "type": "var",
-  "confidence": 92,
-  "explanation": "...",
-  "steps": ["...", "...", "...", "..."],
-  "fifa_law": "Law 11 — Offside...",
-  "emotional_context": "...",
-  "cultural_insight": "..."
-}
-```
+GOALS demonstrates how IBM Granite can:
+- **Bridge language barriers** for 2.5 billion global fans.
+- **Adapt explanations** to different knowledge levels (from New Fan to Expert).
+- Provide culturally-aware, emotionally-intelligent responses.
+- Make complex sporting decisions accessible to absolutely everyone.
 
 ---
 
-## 🏆 IBM SkillsBuild AI Builders Challenge
-
-Goals demonstrates how IBM Granite can be used to:
-- Bridge language barriers for global sports fans
-- Adapt AI explanations to different knowledge levels
-- Provide culturally-aware, emotionally-intelligent responses
-- Make complex sporting decisions accessible to everyone
-
----
-
-## 📁 Project Structure
-
-```
-Goals/
-├── frontend/               # React + Vite + Tailwind
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Hero.jsx
-│   │   │   ├── Features.jsx
-│   │   │   ├── Analyzer.jsx
-│   │   │   ├── OutputCard.jsx
-│   │   │   ├── HowItWorks.jsx
-│   │   │   ├── About.jsx
-│   │   │   └── Footer.jsx
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── index.css
-│   ├── tailwind.config.js
-│   └── vite.config.js
-│
-└── backend/                # FastAPI + IBM Granite
-    ├── main.py
-    ├── models.py
-    ├── granite_client.py
-    ├── requirements.txt
-    └── .env.example
-```
-
----
-
-*Built for 2.5 billion football fans worldwide 🌍*
+<div align="center">
+  <p><em>Built with passion by Team Apex01 for the IBM SkillsBuild AI Builders Challenge 2026.</em></p>
+</div>
