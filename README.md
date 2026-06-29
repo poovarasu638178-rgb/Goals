@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>⚽ GOALS</h1>
+  <h1><img src="favicon.png" width="48" height="48" alt="GOALS Logo" style="vertical-align: middle; margin-right: 10px;" />GOALS</h1>
   <h3>Every Match Moment, Understood by Everyone</h3>
   <p>AI-powered FIFA World Cup companion that explains any match moment to 2.5 billion fans in 20+ languages at any knowledge level.</p>
 
