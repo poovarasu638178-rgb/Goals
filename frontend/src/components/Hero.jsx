@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-
+import Logo from './Logo';
 
 
 export default function Hero() {
@@ -56,10 +56,8 @@ export default function Hero() {
 
 
       {/* Floating Logo */}
-      <img 
-        src="/src/assets/logo.png" 
-        alt="Goals Logo" 
-        className="w-24 h-24 mb-6 animate-float-logo object-contain" 
+      <Logo 
+        className="w-24 h-24 mb-6 animate-float-logo" 
         style={{ opacity: 0, animation: 'fadeUp 0.6s ease-out forwards' }}
       />
 

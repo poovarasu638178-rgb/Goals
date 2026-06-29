@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import OutputCard from './OutputCard';
+import Logo from './Logo';
 
 const LANGUAGES = [
   { flag: '', name: 'English', code: 'en' },
@@ -243,7 +244,7 @@ export default function Analyzer() {
           >
             {/* Spinning Logo */}
             <div className="animate-spin" style={{ animationDuration: '2s' }}>
-              <img src="/src/assets/logo.png" alt="Loading" className="w-12 h-12 object-contain" />
+              <Logo className="w-12 h-12" />
             </div>
             
             {/* Loading text */}

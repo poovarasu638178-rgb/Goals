@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +32,7 @@ export default function Navbar() {
             onClick={() => scrollTo('#home')}
             className="flex items-center gap-2.5 text-white font-bold text-xl tracking-tight hover:opacity-90 transition-opacity"
           >
-            <img src="/src/assets/logo.png" alt="Goals Logo" className="w-8 h-8 object-contain" />
+            <Logo className="w-8 h-8" />
             <span className="font-inter">
               <span className="text-accent">Goals</span>
             </span>
